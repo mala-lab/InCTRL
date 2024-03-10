@@ -36,12 +36,3 @@ DATA_PATH/
 
 ## Citation
 
-```bibtex
-@inproceedings{zhu2023anomaly,
-      title={Anomaly Heterogeneity Learning for Open-set Supervised Anomaly Detection}, 
-      author={Jiawen Zhu and Choubo Ding and Yu Tian and Guansong Pang},
-      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-      year={2024},
-}
-```
-
