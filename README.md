@@ -35,15 +35,11 @@ DATA_PATH/
 python test.py --val_normal_json_path $normal-json-files-for-testing --val_outlier_json_path $abnormal-json-files-for-testing --category $dataset-class-name --dataset_dir $dataset-root
 ```
 
-
 ## Training
 
 ```python
 python main.py --normal_json_path $normal-json-files-for-training --outlier_json_path $abnormal-json-files-for-training --val_normal_json_path $normal-json-files-for-testing --val_outlier_json_path $abnormal-json-files-for-testing
 ```
-
-
-
 
 ## Citation
 
