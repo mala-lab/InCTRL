@@ -9,7 +9,7 @@ Official PyTorch implementation of ["Toward Generalist Anomaly Detection via In-
 - scipy >= 1.10.1
 - scikit-image >= 0.21.0
 - numpy >= 1.24.3
-- tqdm  
+- tqdm >= 4.64.0
 
 ## Run
 #### Step 1. Download the Anomaly Detection Datasets and Save Training/Test Json Files
