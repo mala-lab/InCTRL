@@ -3,6 +3,13 @@
 Official PyTorch implementation of "Toward Generalist Anomaly Detection via In-context Residual Learning with Few-shot Sample Prompts".
 
 ## Setup
+- python >= 3.10.11
+- torch >= 1.13.0
+- torchvision >= 0.14.0
+- scipy >= 1.10.1
+- scikit-image >= 0.21.0
+- numpy >= 1.24.3
+- tqdm  
 
 ## Run
 #### Step 1. Download the Anomaly Detection Datasets and Save Training/Test Json Files
