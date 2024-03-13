@@ -25,7 +25,7 @@ DATA_PATH/
 
 #### Step 2. Download the Few-shot Normal Samples for Inference on [Google Drive]
 
-#### Step 3. Download the Pre-train Models on [Google Drive]
+#### Step 3. Download the Pre-train Models on [Google Drive](https://drive.google.com/file/d/1zEHsbbuUgBC4yuDu3g23wbUGmWmVyDRQ/view?usp=sharing)
 
 #### Step 4. Quick Start
 
