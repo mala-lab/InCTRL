@@ -1,6 +1,6 @@
 # InCTRL (CVPR 2024)
 
-Official PyTorch implementation of "Toward Generalist Anomaly Detection via In-context Residual Learning with Few-shot Sample Prompts".
+Official PyTorch implementation of ["Toward Generalist Anomaly Detection via In-context Residual Learning with Few-shot Sample Prompts"](https://arxiv.org/pdf/2403.06495.pdf).
 
 ## Setup
 - python >= 3.10.11
