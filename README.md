@@ -14,7 +14,7 @@ Official PyTorch implementation of ["Toward Generalist Anomaly Detection via In-
 ## Run
 #### Step 1. Download the Anomaly Detection Datasets and Save Training/Test Json Files
 
-Download the Anomaly Detection Dataset and convert it to MVTec AD format. (For datasets we used in the paper, we provided [the convert and save script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess).
+Download the Anomaly Detection Dataset and convert it to MVTec AD format. (For datasets we used in the paper, we provided [the convert and save script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess)).
 The dataset folder structure should look like:
 ```
 DATA_PATH/
