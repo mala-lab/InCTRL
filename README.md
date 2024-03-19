@@ -31,6 +31,20 @@ DATA_PATH/
 ```
 
 #### Step 2. Save Training/Test Json Files of Datasets.([The save script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess).)
+The json folder structure should look like:
+```
+JSON_PATH/
+    dataset_1/
+        subset_1/
+            subset_1_train_normal.json
+            subset_1_train_outlier.json
+            subset_1_val_normal.json
+            subset_1_val_outlier.json
+        subset_2/
+        subset_3/
+        ...
+    ...
+```
 
 #### Step 3. Download the Few-shot Normal Samples for Inference on [Google Drive](https://drive.google.com/drive/folders/1_RvmTqiCc4ZGa-Oq-uF7SOVotE1RW5QZ?usp=drive_link)
 
@@ -44,7 +58,7 @@ python test.py --val_normal_json_path $normal-json-files-for-testing --val_outli
 ```
 For example, if run on the category `SDD` with `k=2`:
 ```python
-python test.py --val_normal_json_path /AD_json/SDD_val_normal.json --val_outlier_json_path /AD_json/SDD_val_outlier.json --category SDD --dataset_dir /Dataset/SDD_anomaly_detection --few_shot_dir /Few_shot/SDD/2/
+python test.py --val_normal_json_path /AD_json/SDD_val_normal.json --val_outlier_json_path /AD_json/SDD/SDD_val_outlier.json --category SDD --dataset_dir /Dataset/SDD_anomaly_detection --few_shot_dir /Few_shot/SDD/2/
 ```
 
 ## Training
