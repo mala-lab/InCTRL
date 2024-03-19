@@ -12,9 +12,9 @@ Official PyTorch implementation of ["Toward Generalist Anomaly Detection via In-
 - tqdm >= 4.64.0
 
 ## Run
-#### Step 1. Download the Anomaly Detection Datasets and Save Training/Test Json Files
+#### Step 1. Download the Anomaly Detection Datasets
 
-Download the Anomaly Detection Dataset and convert it to MVTec AD format. (For datasets we used in the paper, we provided [the convert and save script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess).)
+Download the Anomaly Detection Dataset and convert it to MVTec AD format. ([The convert script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess).)
 The dataset folder structure should look like:
 ```
 DATA_PATH/
@@ -30,14 +30,21 @@ DATA_PATH/
     ...
 ```
 
-#### Step 2. Download the Few-shot Normal Samples for Inference on [Google Drive](https://drive.google.com/drive/folders/1_RvmTqiCc4ZGa-Oq-uF7SOVotE1RW5QZ?usp=drive_link)
+#### Step 2. Save Training/Test Json Files of Datasets.([The save script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess).)
 
-#### Step 3. Download the Pre-train Models on [Google Drive](https://drive.google.com/file/d/1zEHsbbuUgBC4yuDu3g23wbUGmWmVyDRQ/view?usp=sharing)
+#### Step 3. Download the Few-shot Normal Samples for Inference on [Google Drive](https://drive.google.com/drive/folders/1_RvmTqiCc4ZGa-Oq-uF7SOVotE1RW5QZ?usp=drive_link)
 
-#### Step 4. Quick Start
+#### Step 4. Download the Pre-train Models on [Google Drive](https://drive.google.com/file/d/1zEHsbbuUgBC4yuDu3g23wbUGmWmVyDRQ/view?usp=sharing)
 
+#### Step 5. Quick Start
+
+Change the `TEST.CHECKPOINT_FILE_PATH` in config to the path of pre-train model. and run
 ```python
-python test.py --val_normal_json_path $normal-json-files-for-testing --val_outlier_json_path $abnormal-json-files-for-testing --category $dataset-class-name --dataset_dir $dataset-root
+python test.py --val_normal_json_path $normal-json-files-for-testing --val_outlier_json_path $abnormal-json-files-for-testing --category $dataset-class-name --dataset_dir $dataset-root --few_shot_dir $path-to-few-shot-samples
+```
+For example, if run on the category `SDD` with `k=2`:
+```python
+python test.py --val_normal_json_path /AD_json/SDD_val_normal.json --val_outlier_json_path /AD_json/SDD_val_outlier.json --category SDD --dataset_dir /Dataset/SDD_anomaly_detection --few_shot_dir /Few_shot/SDD/2/
 ```
 
 ## Training
