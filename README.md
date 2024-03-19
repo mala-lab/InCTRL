@@ -38,7 +38,7 @@ DATA_PATH/
 
 #### Step 5. Quick Start
 
-Change the `TEST.CHECKPOINT_FILE_PATH` in config to the path of pre-train model. and run
+Change the `TEST.CHECKPOINT_FILE_PATH` in [config](https://github.com/mala-lab/InCTRL/blob/main/open_clip/config/defaults.py) to the path of pre-train model. and run
 ```python
 python test.py --val_normal_json_path $normal-json-files-for-testing --val_outlier_json_path $abnormal-json-files-for-testing --category $dataset-class-name --dataset_dir $dataset-root --few_shot_dir $path-to-few-shot-samples
 ```
