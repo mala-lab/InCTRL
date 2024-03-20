@@ -30,7 +30,7 @@ DATA_PATH/
     ...
 ```
 
-#### Step 2. Save Training/Test Json Files of Datasets.([The save script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess).)
+#### Step 2. Generate Training/Test Json Files of Datasets.([The generate script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess).)
 The json folder structure should look like:
 ```
 JSON_PATH/
@@ -56,9 +56,9 @@ Change the `TEST.CHECKPOINT_FILE_PATH` in [config](https://github.com/mala-lab/I
 ```python
 python test.py --val_normal_json_path $normal-json-files-for-testing --val_outlier_json_path $abnormal-json-files-for-testing --category $dataset-class-name --dataset_dir $dataset-root --few_shot_dir $path-to-few-shot-samples
 ```
-For example, if run on the category `SDD` with `k=2`:
+For example, if run on the category `candle` of `visa` with `k=2`:
 ```python
-python test.py --val_normal_json_path /AD_json/SDD_val_normal.json --val_outlier_json_path /AD_json/SDD/SDD_val_outlier.json --category SDD --dataset_dir /Dataset/SDD_anomaly_detection --few_shot_dir /Few_shot/SDD/2/
+python test.py --val_normal_json_path /AD_json/visa/candle_val_normal.json --val_outlier_json_path /AD_json/visa/candle_val_outlier.json --category candle --dataset_dir /Dataset/visa_anomaly_detection/visa --few_shot_dir /fs_samples/visa/candle/2/
 ```
 
 ## Training
