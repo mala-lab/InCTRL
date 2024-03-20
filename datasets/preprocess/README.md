@@ -6,7 +6,7 @@ Running the corresponding convert script with the argument `dataset_root` as the
 
 e.g:
 ```python
-python convert_visa.py --dataset_root=./visa
+python convert_visa.py --dataset_root=./AD_json/visa
 ```
 
 ## Generate Json Files for Anomaly Detection Dataset
