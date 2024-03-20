@@ -5,7 +5,7 @@
 Running the corresponding convert script with the argument `dataset_root` as the root of the dataset.
 
 e.g:
-```python
+```bash
 python convert_visa.py --dataset_root=./AD_json/visa
 ```
 
@@ -15,7 +15,7 @@ python convert_visa.py --dataset_root=./AD_json/visa
 #### Running the Generate Script
 
 e.g:
-```python
+```bash
 python gen_val_json.py --dataset_root=./visa_anomaly_detection/visa --dataset_name=candle 
 ```
 
