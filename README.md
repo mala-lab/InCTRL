@@ -11,6 +11,9 @@ Official PyTorch implementation of ["Toward Generalist Anomaly Detection via In-
 - numpy >= 1.24.3
 - tqdm >= 4.64.0
 
+## Device
+Single NVIDIA GeForce RTX 3090
+
 ## Run
 #### Step 1. Download the Anomaly Detection Datasets
 
