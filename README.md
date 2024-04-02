@@ -18,6 +18,7 @@ Single NVIDIA GeForce RTX 3090
 #### Step 1. Download the Anomaly Detection Datasets
 
 Download the Anomaly Detection Dataset and convert it to MVTec AD format. ([The convert script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess).)
+
 The dataset folder structure should look like:
 ```
 DATA_PATH/
