@@ -63,7 +63,7 @@ python test.py --val_normal_json_path $normal-json-files-for-testing --val_outli
 
 For example, if run on the category `candle` of `visa` with `k=2`:
 ```bash
-python test.py --val_normal_json_path /AD_json/visa/candle_val_normal.json --val_outlier_json_path /AD_json/visa/candle_val_outlier.json --category candle --few_shot_dir /fs_samples/visa/candle/2/
+python test.py --val_normal_json_path /AD_json/visa/candle_val_normal.json --val_outlier_json_path /AD_json/visa/candle_val_outlier.json --category candle --few_shot_dir /fs_samples/visa/2/
 ```
 
 ## Training
