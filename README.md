@@ -75,10 +75,10 @@ python main.py --normal_json_path $normal-json-files-for-training --outlier_json
 ## Citation
 
 ```bibtex
-@article{zhu2024toward,
+@inproceedings{zhu2024toward,
   title={Toward Generalist Anomaly Detection via In-context Residual Learning with Few-shot Sample Prompts},
   author={Zhu, Jiawen and Pang, Guansong},
-  journal={arXiv preprint arXiv:2403.06495},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
   year={2024}
 }
 ```
