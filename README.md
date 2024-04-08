@@ -2,6 +2,20 @@
 
 Official PyTorch implementation of ["Toward Generalist Anomaly Detection via In-context Residual Learning with Few-shot Sample Prompts"](https://arxiv.org/pdf/2403.06495.pdf).
 
+## Citation
+
+```bibtex
+@inproceedings{zhu2024toward,
+  title={Toward Generalist Anomaly Detection via In-context Residual Learning with Few-shot Sample Prompts},
+  author={Zhu, Jiawen and Pang, Guansong},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  year={2024}
+}
+```
+<center><img src=""width="80%"></center>
+
+**Abstract**: In this work, we propose to train a Generalist Anomaly Detection (GAD) model with few-shot normal images as sample prompts for AD on diverse datasets on the fly. To this end, we introduce a novel approach that learns an incontext residual learning model for GAD, termed InCTRL. It is trained on an auxiliary dataset to discriminate anomalies from normal samples based on a holistic evaluation of the residuals between query images and few-shot normal sample prompts. Regardless of the datasets, per definition of anomaly, larger residuals are expected for anomalies than normal samples, thereby enabling InCTRL to generalize across different domains without further training. Comprehensive experiments on nine AD datasets are performed to establish a GAD benchmark that encapsulate the detection of industrial defect anomalies, medical anomalies, and semantic anomalies in both one-vs-all and multi-class setting, on which InCTRL is the best performer and significantly outperforms state-of-the-art competing methods.
+
 ## Setup
 - python >= 3.10.11
 - torch >= 1.13.0
@@ -15,9 +29,7 @@ Official PyTorch implementation of ["Toward Generalist Anomaly Detection via In-
 Single NVIDIA GeForce RTX 3090
 
 ## Run
-#### Step 1. Download the Anomaly Detection Datasets
-
-Download the Anomaly Detection Dataset and convert it to MVTec AD format. ([The convert script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess).)
+#### Step 1. Download the Anomaly Detection Dataset(ELPV, SDD, AITEX, VisA, MVTec AD, BrainMRI, HeadCT, MNIST, CIFAR-10) and Convert it to MVTec AD Format([the convert script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess)).
 
 The dataset folder structure should look like:
 ```
@@ -34,7 +46,8 @@ DATA_PATH/
     ...
 ```
 
-#### Step 2. Generate Training/Test Json Files of Datasets.([The generate script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess).)
+#### Step 2. Generate Training/Test Json Files of Anomaly Detection Datasets([the generate script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess)).
+
 The json folder structure should look like:
 ```
 JSON_PATH/
@@ -67,7 +80,6 @@ python test.py --val_normal_json_path /AD_json/visa/candle_val_normal.json --val
 ```
 
 ## Training
-
 ```bash
 python main.py --normal_json_path $normal-json-files-for-training --outlier_json_path $abnormal-json-files-for-training --val_normal_json_path $normal-json-files-for-testing --val_outlier_json_path $abnormal-json-files-for-testing
 ```
@@ -75,14 +87,3 @@ python main.py --normal_json_path $normal-json-files-for-training --outlier_json
 ## Implementation of WinCLIP
 
 WinCLIP is one main competing method to ours, but its official implentation is not publicly available. We have successfully reproduced the results of WinCLIP based on our extensive communications with its authors and used our implementation to perform experiments in the paper. Our implementation has been released at [WinCLIP](https://github.com/mala-lab/WinCLIP).
-
-## Citation
-
-```bibtex
-@inproceedings{zhu2024toward,
-  title={Toward Generalist Anomaly Detection via In-context Residual Learning with Few-shot Sample Prompts},
-  author={Zhu, Jiawen and Pang, Guansong},
-  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
-  year={2024}
-}
-```
