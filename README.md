@@ -72,6 +72,10 @@ python test.py --val_normal_json_path /AD_json/visa/candle_val_normal.json --val
 python main.py --normal_json_path $normal-json-files-for-training --outlier_json_path $abnormal-json-files-for-training --val_normal_json_path $normal-json-files-for-testing --val_outlier_json_path $abnormal-json-files-for-testing
 ```
 
+## Implementation of WinCLIP
+
+WinCLIP is one main competing method to ours, but its official implentation is not publicly available. We have successfully reproduced the results of WinCLIP based on our extensive communications with its authors and used our implementation to perform experiments in the paper. Our implementation has been released at [WinCLIP](https://github.com/mala-lab/WinCLIP).
+
 ## Citation
 
 ```bibtex
