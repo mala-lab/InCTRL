@@ -29,7 +29,7 @@ Official PyTorch implementation of ["Toward Generalist Anomaly Detection via In-
 Single NVIDIA GeForce RTX 3090
 
 ## Run
-#### Step 1. Download the Anomaly Detection Dataset(ELPV, SDD, AITEX, VisA, MVTec AD, BrainMRI, HeadCT, MNIST, CIFAR-10) and Convert it to MVTec AD Format([the convert script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess)).
+#### Step 1. Download the Anomaly Detection Dataset([ELPV](https://github.com/zae-bayern/elpv-dataset), [SDD](https://www.vicos.si/resources/kolektorsdd/), [AITEX](https://www.aitex.es/afid/), [VisA](https://github.com/amazon-science/spot-diff), [MVTec AD](https://www.mvtec.com/company/research/datasets/mvtec-ad), [BrainMRI](https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection), [HeadCT](https://www.kaggle.com/datasets/felipekitamura/head-ct-hemorrhage), [MNIST](https://www.kaggle.com/datasets/jidhumohan/mnist-png), [CIFAR-10](https://www.kaggle.com/datasets/swaroopkml/cifar10-pngs-in-folders)) and Convert it to MVTec AD Format([the convert script](https://github.com/mala-lab/InCTRL/tree/main/datasets/preprocess)).
 
 The dataset folder structure should look like:
 ```
@@ -69,7 +69,7 @@ JSON_PATH/
 
 #### Step 5. Quick Start
 
-Change the `TEST.CHECKPOINT_FILE_PATH` in [config](https://github.com/mala-lab/InCTRL/blob/main/open_clip/config/defaults.py) to the path of pre-train model. and run
+Change the `TEST.CHECKPOINT_FILE_PATH` in [config](https://github.com/mala-lab/InCTRL/blob/main/open_clip/config/defaults.py) to the path of pre-train model and run
 ```bash
 python test.py --val_normal_json_path $normal-json-files-for-testing --val_outlier_json_path $abnormal-json-files-for-testing --category $dataset-class-name --few_shot_dir $path-to-few-shot-samples
 ```
