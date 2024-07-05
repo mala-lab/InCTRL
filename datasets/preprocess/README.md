@@ -16,6 +16,6 @@ python convert_visa.py --dataset_root=./AD_json/visa
 
 e.g:
 ```bash
-python gen_val_json.py --dataset_root=./visa_anomaly_detection/visa --dataset_name=candle 
+python gen_val_json.py --dataset_dir=./visa_anomaly_detection/visa --dataset_name=candle 
 ```
 
