@@ -105,7 +105,7 @@ _C.TEST.ENABLE = True
 _C.TEST.DATASET = "IC_dataset"
 
 # Total mini-batch size
-_C.TEST.BATCH_SIZE = 8
+_C.TEST.BATCH_SIZE = 1
 
 # Path to the checkpoint to load the initial weight.
 _C.TEST.CHECKPOINT_FILE_PATH = ""
